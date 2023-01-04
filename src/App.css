@@ -1,38 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+* {
+  margin: 0px;
+  font-family: 'Inter', sans-serif;
+
+
+}
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  margin: 0px;
+  background-color: #2e3541;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .img {
+    animation: App-logo-spin infinite 3s alternate;
   }
 }
+.navbar .links {
+  text-align: center;
+  padding: 8px;
+  margin-right: 50px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar {
+  background: linear-gradient(rgb(40, 1, 44), rgb(10,10,10) ) ;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 20px;
+  height: 85px;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.links {
+  margin: 30px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
+.links a {
+  color: antiquewhite;
+  text-decoration: none;
+}
+
+.user {
+color: rgb(149, 6, 164);
+}
+
+.img {
+  margin: 9px;
+  border-radius: 25px;
+}
+.login-button {
+  border-radius: 5px;
+  color: rgb(149, 6, 164);
+  margin: 20px;
+  margin-bottom: 180px;
+}
+
+.submit-button:hover {
+  cursor: pointer;
+  background-color: rgb(209, 195, 195);
+}
+
+.logout-button
+{
+  border-radius: 5px;
+  color: rgb(149, 6, 164);
+  margin: 10px;
+  padding: 6px;
+}
+
+p {
+  color: rgb(149, 6, 164);
+}
+.text {
+padding: 22px;
+color: rgb(149, 6, 164);
+
+}
+
 
 @keyframes App-logo-spin {
   from {
-    transform: rotate(0deg);
+    transform: rotate(-25deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(25deg);
   }
+}
+
+input, textarea {
+  padding: 8px 10px;
+  margin: 3px 8px 16px 8px;
+  background-color: #a8acb4;
+  border: 0px transparent;
+  border-radius: 5px;
+  color: rgb(149, 6, 164);
+  font-size: 1rem;
+  z-index: 1;
+  font-family: inter, nunito, sans-serif;
+  max-width: 350px;
+}
+
+form {
+  margin: auto;
+  padding: 30px 20px;
+  width: 440px;
+  background-color: rgb(58, 7, 56);
+  border-radius: 7px;
+  backdrop-filter: blur(5px);
+}
+
+.title {
+  margin-top: 19px;
 }

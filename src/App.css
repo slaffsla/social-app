@@ -15,6 +15,7 @@
   background-color: #E8B9AB;
   background-color: #772431;
   background-color: #8C5F66;
+  background-color: #2d2223;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -101,7 +102,7 @@ color: #ADBCA5;
 
 .footer {
   font-size: small;
-  color: #5c6558;
+  color: #3c4139;
 }
 
 @keyframes App-logo-spin {
@@ -117,6 +118,8 @@ color: #ADBCA5;
   border: 1px solid rgb(136, 134, 134);
   border-radius: 35px;
   margin: 30px 100px;
+  color: #b1b9c8;
+  background-color: #a76f77
 }
 input, textarea {
   padding: 8px 10px;

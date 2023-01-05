@@ -3,9 +3,18 @@
 * {
   margin: 0px;
   font-family: 'Inter', sans-serif;
-
-
 }
+@media (min-width: 486) {
+  .navbar-all .logo {
+    display: block;
+  }
+}
+@media (max-width: 486px) {
+  .navbar-all .logo {
+    display: none;
+  }
+}
+
 .App {
   text-align: center;
   margin: 0px;
@@ -16,6 +25,7 @@
   background-color: #772431;
   background-color: #8C5F66;
   background-color: #2d2223;
+  max-width: 100rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -59,7 +69,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 30px;
+  padding: 10px;
   height: 85px;
   margin-bottom: 11px;
 }
@@ -69,27 +79,22 @@
   flex-direction: row;
   justify-content: flex-end;
   height: 85px;
+  margin-left: -100px;
   margin-bottom: 11px;
 }
 
-/* Style the logo image */
-.navbar .logo img {
-  margin-right: auto;
-  height: 1rem;
-}
-
 .links {
-  margin: 10px;
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 34px;
 }
+
 .links a {
   color: antiquewhite;
   text-decoration: none;
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  margin-right: -25px;
 }
 
 .links a:hover {
@@ -100,10 +105,15 @@
 color: #ADBCA5;
 margin: 10px 0px;
 display: flex;
-justify-content: center;
+justify-content: left;
 align-items: center;
 }
 
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap:8px
+}
 .img {
   margin: 9px;
   border-radius: 25px;
@@ -135,16 +145,14 @@ align-items: center;
 {
   border-radius: 5px;
   color: #ADBCA5;
-  margin: 1px;
-  margin-left: 10px;
+  margin: 10 px;
   padding: 4px;
   min-width: 70px;
 }
 
-
 .text {
 padding: 2px;
-margin: 80px;
+margin: 20px;
 color: #ADBCA5;
 
 }
@@ -170,13 +178,13 @@ color: #ADBCA5;
   color: #3c4139;
   display: flex;
   flex-direction: row;
-  padding: 18px;
+  padding: 10px;
   gap: 11px;
 }
 
 input, textarea {
   padding: 8px 10px;
-  margin: 3px 8px 16px 8px;
+  margin: 3px 8px 10px 8px;
   background-color: #a8acb4;
   border: 0px transparent;
   border-radius: 5px;

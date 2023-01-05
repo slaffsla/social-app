@@ -10,7 +10,7 @@ export const Login = () => {
         navigate("/")
     }
     return <div>
-        <p>Sign In with Google to Continue</p>
+        <p className="signin">Sign In with Google to Continue</p>
         <button className="login-button" onClick={signInWithGoogle}>Sign in With Google</button>
         </div>
 }

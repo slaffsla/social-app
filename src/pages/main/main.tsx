@@ -23,7 +23,7 @@ export const Main = () => {
     useEffect(() => {
         setTimeout(function(){
             getPosts()
-            console.log("usEff")}, 200 )
+            console.log("usEff")}, 20 )
     }, [])
     return (
         <div className="text">

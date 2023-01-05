@@ -37,13 +37,13 @@ export const CreateForm = () => {
         })
         navigate("/")
     }
-    
+
     return (
         <form className="submit-data" onSubmit={handleSubmit(onCreatePost)}>
             <input placeholder="Title..." {...register("title")}/>
-            <p style = {{color: "red"}}>{errors.title?.message}</p>
+            <p style = {{color: "#772431"}}>{errors.title?.message}</p>
             <textarea placeholder="Body..." {...register("body")} />
-            <p style = {{color: "red"}}>{errors.body?.message}</p>
+            <p style = {{color: "#772431"}}>{errors.body?.message}</p>
             <input className="submit-button" type = "submit" />
         </form>
     )

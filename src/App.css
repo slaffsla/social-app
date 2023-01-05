@@ -9,7 +9,12 @@
 .App {
   text-align: center;
   margin: 0px;
-  background-color: #2e3541;
+  background-color: #8C5F66;
+  background-color: #E09891;
+  background-color: #ADBCA5;
+  background-color: #E8B9AB;
+  background-color: #772431;
+  background-color: #8C5F66;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -24,7 +29,7 @@
 }
 
 .navbar {
-  background: linear-gradient(rgb(40, 1, 44), rgb(10,10,10) ) ;
+  background: linear-gradient(#543041, #CB769E ) ;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -44,8 +49,12 @@
   text-decoration: none;
 }
 
+.links a:hover {
+  cursor: pointer;
+  color: rgb(43, 40, 40);
+}
 .user {
-color: rgb(149, 6, 164);
+color: #ADBCA5;
 }
 
 .img {
@@ -54,33 +63,46 @@ color: rgb(149, 6, 164);
 }
 .login-button {
   border-radius: 5px;
-  color: rgb(149, 6, 164);
+  color: #ADBCA5;
   margin: 20px;
   margin-bottom: 180px;
 }
 
+.login-button:hover {
+  border-radius: 9px;
+  color: #596155;
+  margin-bottom: 181px;
+}
+
+.submit-button {
+  background-color: rgb(154, 144, 144);
+}
+
+
 .submit-button:hover {
   cursor: pointer;
-  background-color: rgb(209, 195, 195);
+  background-color: rgb(109, 101, 101);
 }
 
 .logout-button
 {
   border-radius: 5px;
-  color: rgb(149, 6, 164);
+  color: #ADBCA5;
   margin: 10px;
   padding: 6px;
 }
 
-p {
-  color: rgb(149, 6, 164);
-}
+
 .text {
 padding: 22px;
-color: rgb(149, 6, 164);
+color: #ADBCA5;
 
 }
 
+.footer {
+  font-size: small;
+  color: #5c6558;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -91,13 +113,18 @@ color: rgb(149, 6, 164);
   }
 }
 
+.post{
+  border: 1px solid rgb(136, 134, 134);
+  border-radius: 35px;
+  margin: 30px 100px;
+}
 input, textarea {
   padding: 8px 10px;
   margin: 3px 8px 16px 8px;
   background-color: #a8acb4;
   border: 0px transparent;
   border-radius: 5px;
-  color: rgb(149, 6, 164);
+  color: #ADBCA5;
   font-size: 1rem;
   z-index: 1;
   font-family: inter, nunito, sans-serif;
@@ -108,7 +135,7 @@ form {
   margin: auto;
   padding: 30px 20px;
   width: 440px;
-  background-color: rgb(58, 7, 56);
+  background-color: #ADBCA5;
   border-radius: 7px;
   backdrop-filter: blur(5px);
 }

@@ -60,7 +60,7 @@ export const Post = (props: Props) => {
     }, [])
 
     return (
-    <div>
+    <div className="post">
         <div className = "title">
             <h1>{post.title}</h1>
         </div>

@@ -19,10 +19,12 @@ export const Post = (props: Props) => {
     const [user] = useAuthState(auth)
 
     const [likes, setLikes] =  useState<Like[] | null>(null)
+    const [displayPost, setDisplayPost] =  useState<true | false>(true)
 
     const likesRef = collection(db, "likes")
 
     const likesDoc = query(likesRef, where ("postId", "==", post.id))
+
     const getLikes = async () => {
         const data = await getDocs(likesDoc)
         setLikes(data.docs.map((doc) => ({userId: doc.data().userId, likeId: doc.id})))
@@ -45,35 +47,62 @@ export const Post = (props: Props) => {
 
             const likeToDeleteData = await getDocs(likeToDeleteQuery)
             const likeId = likeToDeleteData.docs[0].id
+            console.log("likeId: ",likeId)
+
             const likeToDelete = doc(db, "likes", likeId)
+            console.log("likeToDelete",likeToDelete)
+
             await deleteDoc(likeToDelete);
             if (user) {
             setLikes((prev) => prev &&prev.filter((like) => like.likeId !== likeId))
             }}
-        catch (err)  {console.log(err)}
+        catch (err)  {console.log("Err:",err)}
+    }
+
+    const removePost = async () => {
+        try {
+            console.log ("post",post)
+            
+            const postToDelete = doc(db, "posts", post.id)
+            console.log(postToDelete)
+            await deleteDoc(postToDelete);
+            console.log("post: ", post)
+            setDisplayPost(false)
+                    }
+            
+        catch (err)  {
+            console.log(err)}
     }
 
     const hasUserLiked = likes?.find((like) => like.userId === user?.uid )
+
+    const hasUserPosted = post.userId===user?.uid
 
     useEffect(() => {
       getLikes()
     }, [])
 
     return (
-    <div className="post">
-        <div className = "title">
-            <h1>{post.title}</h1>
-        </div>
-        <div>
-            <p className = "body">{post.body}</p>
-        </div>
-        <div className="footer">
-            <p>@{post.username}</p>
-            <button onClick={hasUserLiked? removeLike : addLike}>
-                {hasUserLiked ? <>&#128078;</> : <>&#128077;</>} 
-            </button>
-            {likes && <p>{likes?.length} Likes</p>}
-        </div>
-    </div>
+    <>
+    {  displayPost&&
+        <div className="post">
+            <div className = "title">
+                <h1>{post.title}</h1>
+            </div>
+            <div>
+                <p className = "body">{post.body}</p>
+            </div>
+            <div className="footer">
+                <p>@{post.username}</p>
+                <button onClick={hasUserLiked? removeLike : addLike}>
+                    {hasUserLiked ? <>&#128078;</> : <>&#128077;</>} 
+                </button >
+                {hasUserPosted &&<button className="logout-button" onClick={removePost}>
+                    X 
+                </button>}
+                {likes && <p>{likes?.length} Likes</p>}
+            </div>
+        </div>}
+    </>
    )
 }

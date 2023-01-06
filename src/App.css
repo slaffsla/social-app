@@ -44,7 +44,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .post {
-    animation: post-slide ease-in-out 0.4s alternate;
+    animation: post-slide ease-in-out 0.9s alternate;
   }
 }
 
@@ -57,6 +57,24 @@
 
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-slide ease-in-out 1.8s alternate;
+  }
+}
+
+@keyframes logo-slide {
+  from {
+    transform:translateX(80%)
+  }
+  to {
+    transform:translateX(0%)
+  }
+}
+
+
+
 
 .navbar .links {
   text-align: center;

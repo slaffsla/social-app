@@ -26,7 +26,6 @@ export const CreateForm = () => {
 
     const postsRef = collection(db, "posts")
 
-
     const onCreatePost = async (data: createFormData ) => {
         await addDoc(postsRef, {
             /* title: data.title,

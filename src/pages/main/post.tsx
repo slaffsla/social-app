@@ -4,6 +4,7 @@ import { db, auth } from "../../config/firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
 import { useEffect, useState } from "react"
 import { userInfo } from "os"
+import Linkify from "react-linkify"
 
 interface Props {
     post: PostInt
@@ -83,11 +84,11 @@ export const Post = (props: Props) => {
     }, [])
 
     return (
-    <>
+    <Linkify>
     {  displayPost&&
         <div className="post">
             <div className = "title">
-                <h1>{post.title}</h1>
+                <h3>{post.title}</h3>
             </div>
             <div>
                 <p className = "body">{post.body}</p>
@@ -103,6 +104,6 @@ export const Post = (props: Props) => {
                 {likes && <p>{likes?.length} Likes</p>}
             </div>
         </div>}
-    </>
+        </Linkify>
    )
 }

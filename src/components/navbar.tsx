@@ -18,7 +18,8 @@ export const Navbar = () => {
                 <div className="links">
                 <Link to = "/">Home</Link>
                 {user ? <Link to = "/createpost">Create Post</Link> :
-                <Link to = "/login">Login</Link>}
+                <>
+                <Link to = "/login">Login</Link><p>Must log in to see content!</p></>}
                 </div>
                 <div className="user">
                     {user && (

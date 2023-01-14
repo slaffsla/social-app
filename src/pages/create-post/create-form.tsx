@@ -1,7 +1,7 @@
 import {useForm} from "react-hook-form"
 import * as yup from "yup"
 import {yupResolver} from "@hookform/resolvers/yup"
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import {db, auth} from "../../config/firebase"
 import {useAuthState} from "react-firebase-hooks/auth"
 import { useNavigate } from "react-router-dom";
@@ -32,7 +32,8 @@ export const CreateForm = () => {
             body: data.body, */
             ...data,
             username: user?.displayName,
-            userId: user?.uid
+            userId: user?.uid,
+            createdAt: serverTimestamp()
         })
         navigate("/")
     }

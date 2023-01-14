@@ -1,3 +1,14 @@
+This is a responsively designed social app connecting to a DB on Firebase, user must log in with Google.
+
+It has some animations. Made with React.
+
+Live example here: https://social-app-sla.web.app/
+
+
+https://user-images.githubusercontent.com/7899896/212502283-fa7ad4ca-eeea-431d-a5d7-7ca60b57d325.mov
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,4 +1,4 @@
-This is a responsively designed social app connecting to a DB on Firebase, user must log in with Google.
+This is a responsively designed social app connecting to a DB on Firebase, user must log in with a Google account. Somewhat limited functionality, but hey, I am not Facebook!
 
 It has some animations. Made with React.
 

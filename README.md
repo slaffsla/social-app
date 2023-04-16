@@ -4,6 +4,7 @@ It has some animations. Made with React and FireBase.
 
 Live example here: https://social-app-sla.web.app/
 
+![social-app](https://user-images.githubusercontent.com/7899896/232316335-a4c1473f-d3eb-4ac8-8b94-e8efd0279c50.png)
 
 https://user-images.githubusercontent.com/7899896/212502283-fa7ad4ca-eeea-431d-a5d7-7ca60b57d325.mov
 
